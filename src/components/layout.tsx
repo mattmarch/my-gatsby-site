@@ -1,15 +1,22 @@
 import React from "react"
 import styled from "styled-components"
+import Header from "./header"
 
 export default ({ children }) => (
-    <ContentContainer>
-        {children}
-    </ContentContainer>
+    <Page>
+      <Header/>
+      <ContentContainer>{children}</ContentContainer>
+    </Page>
+
 )
 
+const Page = styled.div`
+  height: 100%;
+  margin-top: 0px;
+`
+
 const ContentContainer = styled.div`
-    color: hotpink;
-    margin: 3rem auto;
-    max-width: 650px;
-    padding: 0 1rem;
+  margin: 3rem auto;
+  max-width: 650px;
+  padding: 0 1rem;
 `
