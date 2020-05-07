@@ -1,9 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import Header from "./header"
+import { Helmet } from "react-helmet"
 
 export default ({ children }) => (
     <Page>
+    <Helmet>
+      <title>Matt's website</title>
+    </Helmet>
       <Header/>
       <ContentContainer>{children}</ContentContainer>
     </Page>
