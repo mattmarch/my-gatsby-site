@@ -1,18 +1,36 @@
 import React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
-export default () => (
-  <Container>
-    <Title>Matt's Website</Title>
-  </Container>
-)
+import BackgroundImage from "gatsby-background-image"
 
-const Container = styled.div`
-  background-image: url(bridge.jpg);
-  background-size: cover;
+export default () => {
+  const data = useStaticQuery(
+    graphql`
+    query {
+      desktop: file(relativePath: { eq: "bridge.jpg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    `
+  )
+  const imageData = data.desktop.childImageSharp.fluid
+  return (
+    <StyledBackgroundImage
+      fluid={imageData}
+    >
+      <Title>Matt's Website</Title>
+    </StyledBackgroundImage>
+  )
+}
+
+const StyledBackgroundImage = styled(BackgroundImage)`
   background-position-y: 26%;
   padding: 10px;
-  width: 100%;
 `
 
 const Title = styled.h1`
