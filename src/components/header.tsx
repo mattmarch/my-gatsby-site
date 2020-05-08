@@ -4,29 +4,29 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import BackgroundImage from "gatsby-background-image"
 
-export default () => {
+const Header = () => {
   const data = useStaticQuery(
     graphql`
-    query {
-      desktop: file(relativePath: { eq: "bridge.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
+      query {
+        desktop: file(relativePath: { eq: "bridge.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
           }
         }
       }
-    }
     `
   )
   const imageData = data.desktop.childImageSharp.fluid
   return (
-    <StyledBackgroundImage
-      fluid={imageData}
-    >
+    <StyledBackgroundImage fluid={imageData}>
       <Title>Matt's Website</Title>
     </StyledBackgroundImage>
   )
 }
+
+export default Header
 
 const StyledBackgroundImage = styled(BackgroundImage)`
   background-position-y: 26%;

@@ -3,16 +3,21 @@ import styled from "styled-components"
 import Header from "./header"
 import { Helmet } from "react-helmet"
 
-export default ({ children }) => (
-    <Page>
+type Props = {
+  children: React.ReactNode
+}
+
+const Layout = (props: Props) => (
+  <Page>
     <Helmet>
       <title>Matt's website</title>
     </Helmet>
-      <Header/>
-      <ContentContainer>{children}</ContentContainer>
-    </Page>
-
+    <Header />
+    <ContentContainer>{props.children}</ContentContainer>
+  </Page>
 )
+
+export default Layout
 
 const Page = styled.div`
   height: 100%;
