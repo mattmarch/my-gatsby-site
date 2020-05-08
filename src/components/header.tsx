@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import BackgroundImage from "gatsby-background-image"
 
@@ -21,7 +21,9 @@ const Header = () => {
   const imageData = data.desktop.childImageSharp.fluid
   return (
     <StyledBackgroundImage fluid={imageData}>
-      <Title>Matt's Website</Title>
+      <Link to="/">
+        <Title>Matt's Website</Title>
+      </Link>
     </StyledBackgroundImage>
   )
 }
@@ -36,4 +38,5 @@ const StyledBackgroundImage = styled(BackgroundImage)`
 const Title = styled.h1`
   color: white;
   padding: 2rem 20% 4rem 20%;
+  text-shadow: none;
 `

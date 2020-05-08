@@ -7,13 +7,13 @@ type Props = {
   children: React.ReactNode
 }
 
-const Layout = (props: Props) => (
+const Layout = ({ children }: Props) => (
   <Page>
     <Helmet>
       <title>Matt's website</title>
     </Helmet>
     <Header />
-    <ContentContainer>{props.children}</ContentContainer>
+    <ContentContainer>{children}</ContentContainer>
   </Page>
 )
 
