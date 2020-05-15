@@ -40,21 +40,18 @@ type HeadingProps = {
 const Heading = ({ frontmatter }: HeadingProps) => (
 <div>
   <Title>{frontmatter.title}</Title>
-  <PublishedDate>First published on {formatDate(new Date(frontmatter.date))}</PublishedDate>
+  <PublishedDate>Published {new Date(frontmatter.date).toLocaleDateString()}</PublishedDate>
 </div>
 )
 
 const Title = styled.h1`
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `
 
-const PublishedDate = styled.h4`
+const PublishedDate = styled.p`
+  font-size: 0.8rem;
   margin-top: 0;
 `
-
-const formatDate = (date: Date) => 
-  `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`
-
 
 export const query = graphql`
   query($slug: String!) {
