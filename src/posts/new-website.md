@@ -5,7 +5,7 @@ date: "2020-05-15"
 
 You're reading this on the new and updated version of my website. I'm using [Gatsby](https://www.gatsbyjs.org/) built and hosted for free by [Netlify](https://www.netlify.com/).
 
-I love starting personal projects. Unfortunately much more fun than finishing them. The motivation behind this website is to have somewhere to build a portfolio and force myself to put the final polish on projects to get them into a state to show off.
+I love starting personal projects. Unfortunately much more than finishing them. The motivation behind this website is to have somewhere to build a portfolio and force myself to put the final polish on projects to get them into a state to show off.
 
 Previously, this site used [Github pages and Jekyll](https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll). I'm a fan of the idea of using Markdown to statically generate blog like pages, but unfortunately not really a fan of any of the default themes. Of course, the themes are completely customisable/overridable but making seemingly small tweaks always seems to be more painful than it should be.
 
