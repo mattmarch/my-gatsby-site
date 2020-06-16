@@ -38,10 +38,14 @@ type HeadingProps = {
 }
 
 const Heading = ({ frontmatter }: HeadingProps) => (
-<div>
-  <Title>{frontmatter.title}</Title>
-  <PublishedDate>Published {new Date(frontmatter.date).toLocaleDateString()}</PublishedDate>
-</div>
+  <div>
+    <Title>{frontmatter.title}</Title>
+    {frontmatter.date && (
+      <PublishedDate>
+        Published {new Date(frontmatter.date).toLocaleDateString()}
+      </PublishedDate>
+    )}
+  </div>
 )
 
 const Title = styled.h1`
