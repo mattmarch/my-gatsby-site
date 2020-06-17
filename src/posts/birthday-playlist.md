@@ -3,7 +3,7 @@ title: "Birthday Playlist Generator - a React app using Spotify's developer API 
 date: "2020-06-16"
 ---
 
-A couple of years ago I went to a 50th birthday party where the playlist were the 50 (or 51) songs which were UK number one on the celebrants past birthdays. It had taken the Birthday Girl's daughter hours of looking up all the tracks and adding them to a Spotify playlist. So I not only thought this was a great fun idea, but also something which could (/should) be automated and so tucked this away into my list of projects ideas.
+A couple of years ago I went to a 50th birthday party where the playlist consisted of the 50 (or 51) songs which had been UK number one on the celebrant's past birthdays. It had taken the Birthday Girl's daughter hours of looking up all the tracks and adding them to a Spotify playlist. So I not only thought this was a great fun idea, but also something which could (/should) be automated and so tucked this away into my list of projects ideas.
 
 Well, I finally got around to building it: you can use it at https://playlist.mattmarch.co.uk and check out the [source code on Github](https://github.com/mattmarch/BirthdayPlaylist).
 
