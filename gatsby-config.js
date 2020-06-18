@@ -29,5 +29,11 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-goatcounter`,
+      options: {
+        code: `mattmarch`,
+      },
+    },
   ],
 }
