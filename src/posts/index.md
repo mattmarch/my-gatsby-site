@@ -4,7 +4,7 @@ title: "Hi, I'm Matt March, and welcome to my website!"
 
 I'm a Bristol based software engineer currently working at [Ghyston](https://www.ghyston.com/). You can find me on:
 
-* [Github](https://github.com/mattmarch>Github)
+* [Github](https://github.com/mattmarch)
 * [LinkedIn](https://www.linkedin.com/in/matthew-march-a75b21121/)
 * [Email](mailto:me@mattmarch.co.uk)
 
