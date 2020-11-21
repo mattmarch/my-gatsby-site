@@ -2,6 +2,9 @@ const path = require(`path`)
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    siteUrl: "https://mattmarch.co.uk/"
+  },
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
@@ -35,5 +38,7 @@ module.exports = {
         code: `mattmarch`,
       },
     },
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-advanced-sitemap`
   ],
 }
