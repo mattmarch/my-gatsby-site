@@ -10,22 +10,20 @@ Well, I finally got around to building it: you can use it at https://playlist.ma
 The app is a client side only React app (using Typescript), hosted on Github pages, with Github actions to automatically deploy on push and update the chart data once a week. The app first gives you a list of number one single names on your past Birthdays, and the option to "connect with Spotify" (using OAuth), at which point the app can match up songs with Spotify, display album art, and provide a button to turn the track list into a Spotify playlist.
 
 There were 3 things I wanted to gain from this project:
+
 1. Practice setting up an OAuth flow
 2. Try out Github Actions
 3. A React refresher. Last time I was properly working on a React project was before [hooks](https://reactjs.org/docs/hooks-intro.html) were stable, so it was a good refresher and chance to pick up the latest features (which are great - good riddance lifecycle methods!)
 
-
 ### OAuth with Spotify
 
 The [recommended way](https://oauth.net/2/grant-types/implicit/) of using OAuth in a client only app is the _authorization code flow with PKCE_. Unfortunately this [isn't supported by Spotify](https://community.spotify.com/t5/Spotify-for-Developers/Authentication-API-failing-in-production-right-now/m-p/4960693/highlight/true#M234), and therefore the only option is using the _implicit grant flow_. This limited the learning from this, but after following [the instructions from Spotify](https://developer.spotify.com/documentation/general/guides/authorization-guide/#implicit-grant-flow) it was nice and easy to set up.
-
 
 ### Setting up Github Actions
 
 There were two things I wanted Github Actions to do: automatically deploy to Github Pages on push, and automatically run a Python script to update the chart data once a week.
 
 I expected this to have some hidden fiddliness which would make it a pain to set up (as is often the case with CI tools) but was pleasantly surprised. There were plenty of _starters_ and I quickly found ones which needed only small changes, and it worked (almost) first go. Five minutes into the couple of hours I'd put aside to set it up and it was done and working!
-
 
 ### A gotcha with Github Pages and Spotify OAuth flow
 
