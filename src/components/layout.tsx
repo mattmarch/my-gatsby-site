@@ -11,6 +11,9 @@ const Layout = ({ children }: Props) => (
   <Page>
     <Helmet>
       <title>Matt's website</title>
+      <meta name="description" content="Matt's website"/>
+      <meta name="keywords" content="software, blog, personal, matt"/>
+      <html lang="en"/>
     </Helmet>
     <Header />
     <ContentContainer>{children}</ContentContainer>
@@ -30,14 +33,14 @@ const Page = styled.div`
   margin-top: 0px;
 `
 
-const ContentContainer = styled.div`
+const ContentContainer = styled.main`
   margin: 3rem auto;
   max-width: 650px;
   padding: 0 1rem;
   flex-grow: 1;
 `
 
-const Footer = styled.div`
+const Footer = styled.footer`
   font-size: 0.8rem;
   padding: 1rem;
   text-align: center;

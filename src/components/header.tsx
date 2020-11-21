@@ -20,11 +20,13 @@ const Header = () => {
   )
   const imageData = data.desktop.childImageSharp.fluid
   return (
-    <StyledBackgroundImage fluid={imageData}>
-      <Link to="/">
-        <Title>Matt's Website</Title>
-      </Link>
-    </StyledBackgroundImage>
+    <header>
+      <StyledBackgroundImage fluid={imageData}>
+        <Link to="/">
+          <Title>Matt's Website</Title>
+        </Link>
+      </StyledBackgroundImage>
+    </header>
   )
 }
 
