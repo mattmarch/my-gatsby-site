@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Header from "./header"
 import { Helmet } from "react-helmet"
+import { GlobalStyle } from "../utils/GlobalStyle"
 
 type Props = {
   children: React.ReactNode
@@ -9,6 +10,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => (
   <Page>
+    <GlobalStyle/>
     <Helmet>
       <title>Matt's website</title>
       <meta name="description" content="Matt's website"/>
